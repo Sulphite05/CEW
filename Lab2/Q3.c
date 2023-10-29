@@ -9,14 +9,6 @@ int main(){
   scanf("%s", &s2);
   int i;
   for(i = 0; s1[i]==s2[i] && s1[i]!='\0'; i++);
-  if(s1[i] > s2[i]){
-    printf("%s is more than %s", s1, s2);
-  }
-  else if(s1[i] < s2[i]){
-    printf("%s is less than %s", s1, s2);
-  }
-  else{
-    printf("%s is equal to %s", s1, s2);
-  }
+  printf("%d", s1[i] - s2[i]);
   return 0;
 }
