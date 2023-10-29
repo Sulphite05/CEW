@@ -8,7 +8,7 @@ int main(){
   printf("Enter the second string: ");
   scanf("%s", &s2);
   int i;
-  for(i = 0; s1[i]==s2[i]; i++);
+  for(i = 0; s1[i]==s2[i] && s1[i]!='\0'; i++);
   if(s1[i] > s2[i]){
     printf("%s is more than %s", s1, s2);
   }
