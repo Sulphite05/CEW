@@ -2,16 +2,22 @@
 
 #include <stdio.h>
 int main(){
-  int arr[] = {1, 2, 3, 1, 2, 5, 3, 2, 6}, size = sizeof(arr)/sizeof(arr[0]);
-  for(int i = 0; i < size; i++){
-      int count = 0;
-      for(int j = 0; j < size; j++){
-          if(arr[i] == arr[j])
-            count++;
-      }
-      if(count == 1){
-          printf("%d\n", arr[i]);
-      }
-  }
-  return 0;
+    int len, count;
+    printf("Enter the length of an array: ");
+    scanf("%d", &len);
+    int arr[len];
+    for(int i = 0; i<len; i++){
+        printf("Enter element#%d: ",i+1);
+        scanf("%d",&arr[i]);
+    }
+    printf("The unique elements in your array are:\n");
+    for(int i = 0; i<len; i++){
+        count = 0;
+        for(int j = 0; j<len; j++)
+            if(arr[i]==arr[j])
+                count++;
+        if(count==1)
+            printf("%d ", arr[i]);
+    }
+    return 0;    
 }
